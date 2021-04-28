@@ -1,2 +1,2 @@
-install_dir="/opt/ar18"
-module_name="screen_scale"
+user_name="nulysses"
+install_dir="/home/${user_name}/.config/xfce4/xfconf/xfce-perchannel-xml"

@@ -9,9 +9,7 @@ script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 . "${script_dir}/vars"
 
-if [ ! -d "${install_dir}" ]; then
-  mkdir -p "${install_dir}"
-fi
-
-rm -rf "${install_dir}/${module_name}"
-cp -rf "${script_dir}/${module_name}" "${install_dir}/${module_name}"
+mkdir -p "${install_dir}"
+cp -f "${script_dir}/xfce4-keyboard-shortcuts.xml" "${install_dir}/xfce4-keyboard-shortcuts.xml"
+chown "${user_name}:${user_name}" "${install_dir}/xfce4-keyboard-shortcuts.xml"
+chmod 664 "${install_dir}/xfce4-keyboard-shortcuts.xml"
