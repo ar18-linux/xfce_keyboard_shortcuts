@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 if [[ "$(whoami)" != "root" ]]; then
   read -p "[ERROR] must be root!"
   exit 1
@@ -10,6 +12,6 @@ script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 . "${script_dir}/vars"
 
 mkdir -p "${install_dir}"
-cp -f "${script_dir}/xfce4-keyboard-shortcuts.xml" "${install_dir}/xfce4-keyboard-shortcuts.xml"
+cp -f "${script_dir}/xfce_keyboard_shortcuts/xfce4-keyboard-shortcuts.xml" "${install_dir}/xfce4-keyboard-shortcuts.xml"
 chown "${user_name}:${user_name}" "${install_dir}/xfce4-keyboard-shortcuts.xml"
 chmod 664 "${install_dir}/xfce4-keyboard-shortcuts.xml"
