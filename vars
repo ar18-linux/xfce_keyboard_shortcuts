@@ -1,1 +1,2 @@
+# $user_name is exported in the deployment script
 install_dir="/home/${user_name}/.config/xfce4/xfconf/xfce-perchannel-xml"
