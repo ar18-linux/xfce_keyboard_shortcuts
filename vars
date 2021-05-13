@@ -1,2 +1,7 @@
-# $user_name is exported in the deployment script
+module_name="xfce_keyboard_shortcuts"
+
+if [ -z "${user_name+x}" ]; then
+  user_name="$(logname)"
+fi
+
 install_dir="/home/${user_name}/.config/xfce4/xfconf/xfce-perchannel-xml"
