@@ -63,6 +63,7 @@
       <property name="&lt;Alt&gt;&lt;Super&gt;l" type="string" value="/opt/ar18/xfce_display_off/display_off_lock.sh"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;&lt;Super&gt;l" type="string" value="/opt/ar18/xfce_display_off/display_off_no_lock.sh"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;t" type="string" value="test"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;f" type="string" value="fsearch"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
