@@ -1,6 +1,6 @@
 module_name="xfce_keyboard_shortcuts"
 
-if [ -z "${user_name+x}" ]; then
+if [ ! -v user_name ]; then
   user_name="$(logname)"
 fi
 
