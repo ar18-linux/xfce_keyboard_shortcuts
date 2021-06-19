@@ -6,7 +6,7 @@ xfconf-query -c xfce4-keyboard-shortcuts -p "/xfwm4/custom/<Control><Alt>Right" 
 
 
 xfconf-query -c xfce4-keyboard-shortcuts -p "/xfwm4" -r
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands -r
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands" -r
 
 # Custom shortcuts
 xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>1" -s "/opt/ar18/screen_scale/increase.sh" 
