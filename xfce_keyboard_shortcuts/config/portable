@@ -4,29 +4,27 @@
 xfconf-query -c xfce4-keyboard-shortcuts -p "/xfwm4/custom/<Control><Alt>Left" -r
 xfconf-query -c xfce4-keyboard-shortcuts -p "/xfwm4/custom/<Control><Alt>Right" -r
 
-
-xfconf-query -c xfce4-keyboard-shortcuts -p "/xfwm4" -r
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands" -r
+# Not possible to remove the whole group to start clean?
+#xfconf-query -c xfce4-keyboard-shortcuts -p "/xfwm4" -r
+#xfconf-query -c xfce4-keyboard-shortcuts -p "/commands" -r
 
 # Custom shortcuts
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>1" -s "/opt/ar18/screen_scale/increase.sh" 
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>2" -s "/opt/ar18/screen_scale/reset.sh"
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>3" -s "/opt/ar18/screen_scale/decrease.sh"
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>1" -s "/opt/ar18/screen_scale/increase.sh" --create
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>2" -s "/opt/ar18/screen_scale/reset.sh" --create
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>3" -s "/opt/ar18/screen_scale/decrease.sh" --create
 
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>f" -s "fsearch"
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>f" -s "fsearch" --create
 
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>k" -s "/opt/ar18/kill_focussed_window/kill_focussed_window.sh"
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>k" -s "/opt/ar18/kill_focussed_window/kill_focussed_window.sh" --create
 
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>l" -s "/opt/ar18/xfce_display_off/display_off_lock.sh"
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary><Alt><Super>l" -s "/opt/ar18/xfce_display_off/display_off_no_lock.sh"
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>l" -s "/opt/ar18/xfce_display_off/display_off_lock.sh" --create
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary><Alt><Super>l" -s "/opt/ar18/xfce_display_off/display_off_no_lock.sh" --create
 
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>s" -s "/opt/ar18/suspend/suspend_with_password.sh"
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary><Alt><Super>s" -s "/opt/ar18/suspend/suspend_no_password.sh"
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Super>s" -s "/opt/ar18/suspend/suspend_with_password.sh" --create
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary><Alt><Super>s" -s "/opt/ar18/suspend/suspend_no_password.sh" --create
 
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary><Alt>t" -s "xfce4-terminal"
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary><Alt>t" -s "xfce4-terminal" --create
 
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary>space" -s "xfce4-popup-whiskermenu"
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary>space" -s "xfce4-popup-whiskermenu" --create
 
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Super>e" -s "spacefm"
-
-
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Super>e" -s "spacefm" --create
