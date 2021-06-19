@@ -4,4 +4,4 @@ if [ ! -v user_name ]; then
   user_name="$(logname)"
 fi
 
-install_dir="/home/${user_name}/.config/xfce4/xfconf/xfce-perchannel-xml"
+#install_dir="/home/${user_name}/.config/xfce4/xfconf/xfce-perchannel-xml"
