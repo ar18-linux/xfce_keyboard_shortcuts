@@ -1,7 +1,8 @@
 module_name="xfce_keyboard_shortcuts"
 
 if [ ! -v user_name ]; then
+  user_name="$(whoami)"
+fi
+if [ ! -v user_name ]; then
   user_name="$(logname)"
 fi
-
-#install_dir="/home/${user_name}/.config/xfce4/xfconf/xfce-perchannel-xml"
