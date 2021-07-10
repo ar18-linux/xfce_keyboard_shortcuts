@@ -3,7 +3,7 @@
 
 # Prepare script environment
 {
-  # Script template version 2021-07-10_11:24:30
+  # Script template version 2021-07-10_11:32:20
   # Get old shell option values to restore later
   shopt -s inherit_errexit
   IFS=$'\n' shell_options=($(shopt -op))
@@ -81,11 +81,17 @@ ar18.script.execute_with_sudo chmod +x "${script_dir}/${module_name}/exec.sh"
     eval "${option}"
   done
 }
+function clean_up(){
+  rm -rf "/tmp/${ar18_parent_process}"
+}
 # Return or exit depending on whether the script was sourced or not
 {
   if [ "${ar18_sourced_map["${script_path}"]}" = "1" ]; then
     return "${ar18_exit_map["${script_path}"]}"
   else
+    if [ "${ar18_parent_process}" = "$$" ]; then
+      clean_up
+    fi
     exit "${ar18_exit_map["${script_path}"]}"
   fi
 }
